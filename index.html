@@ -34,9 +34,11 @@ O projeto também destaca o trabalho em equipe, com cada integrante responsável
       <p>Explicação geral da organização do código e dos módulos.</p>
       <ul>
         <li><b>main.cpp</b> — ponto de entrada do programa</li>
-        <li><b>Game.cpp / Game.h</b> — lógica principal do jogo</li>
+        <li><b>Game.cpp / Game.h</b> — encapsula todo o funcionamento da seção do jogo.</li>
         <li><b>Events.cpp / Events.h</b> — sistema de eventos e respostas</li>
         <li><b>Interface.cpp</b> — exibição e interação via terminal</li>
+        <li><b>Database</b> — exibição e interação via terminalconfigura o banco de dados e disponibiliza um cliente para as operações CRUD das tabelas existentes.</li>
+
       </ul>
       <p>Diagrama da estrutura:</p>
       <img src="imagens/Diagrama de Classes.jpg" alt="Diagrama de classes">
@@ -45,10 +47,11 @@ O projeto também destaca o trabalho em equipe, com cada integrante responsável
     <section id="poo">
       <h2>Conceitos de POO Aplicados</h2>
       <ul>
-        <li><b>Encapsulamento:</b> descrição curta</li>
-        <li><b>Herança:</b> descrição curta</li>
-        <li><b>Polimorfismo:</b> descrição curta</li>
-        <li><b>Abstração:</b> descrição curta</li>
+        <li><b>Encapsulamento:</b> os atributos de uma classe separam bem o que esse conceito possui, o que pode ser acessado externamente (públicos) e o que são atributos de acesso interno (privados). Foi utilizado em diversas classes por meio de getters, setters e métodos privados.</li>
+        <li><b>Herança:</b> uma classe específica pode herdar comportamentos de uma classe mais geral. Embora não tenha sido utilizada, a arquitetura implementada permite, por exemplo, que uma interface seja um contrato do qual uma classe InterfaceGráfica herdaria seus comportamentos principais, alterando a UX, mas mantendo o contrato entre Eventos e Interfaces.</li>
+        <li><b>Polimorfismo:</b> uma mesma classe pode herdar comportamentos distintos. Não houve necessidade de uso desse conceito no projeto.</li>
+        <li><b>Abstração:</b> uma classe representa apenas os atributos relevantes para a aplicação, sem se confundir com o conceito na vida real.
+Exemplo: Spirit possui alguns atributos relevantes para o combate, mas o ente fictício (espírito combatente) teria diversos outros comportamentos e detalhes se existisse de fato.</li>
       </ul>
     </section>
 
@@ -74,10 +77,10 @@ docker-compose run --rm app
     <section id="equipe">
       <h2>Equipe</h2>
       <ul>
-        <li><b>Aldus Daniel Ferreira de Souza Monteiro:</b>  Arquitetura de módulos, criação do banco de dados, criador da lógica dos menus.</li>
-        <li><b>Igor de Azevedo Soares:</b> Desenvolvimento do sistema de criação de personagem, desenvolvimento do sistema de luta, design das mecânicas do jogo, desenvolvimento do funcionamento de todos os menus, escrita do relatório, escrita para o site, gravação do vídeo, criação do diagrama de classes.</li>
-        <li><b>matheus noleto de sampaio gominho rosa:</b> configuração api externa e banco de dados</li>
-        <li><b>Reilson Batista da Fonseca:</b>desenvolvedor de features negociais, escrita do relatório, desenvolvimento do site.</li>
+        <li><b>Aldus Daniel Ferreira de Souza Monteiro:</b>  Arquitetura de módulos, configuração de containers, criação do banco de dados, implementação da navegação (menus), lógica de eventos e mecânicas específicas do jogo.</li>
+        <li><b>Igor de Azevedo Soares:</b> Desenvolvimento do sistema de criação de personagens, desenvolvimento do sistema de luta, design das mecânicas de batalha, escrita do relatório, texto para o site, gravação do vídeo e criação do diagrama de classes.</li>
+        <li><b>Matheus Noleto de Sampaio Gominho Rosa:</b> Desenvolvimento do sistema de criação de personagens, desenvolvimento do sistema de luta, design das mecânicas de batalha, escrita do relatório, texto para o site, gravação do vídeo e criação do diagrama de classes.</li>
+        <li><b>Reilson Batista da Fonseca:</b>Desenvolvimento de features negociais, escrita do relatório e desenvolvimento do site desenvolvedor de features negociais, escrita do relatório, desenvolvimento do site.</li>
       </ul>
     </section>
 
@@ -85,7 +88,7 @@ docker-compose run --rm app
       <h2>Links</h2>
       <ul>
         <li><a href="https://github.com/AldusD/raising-fighting-spirit" target="_blank">Repositório no GitHub</a></li>
-        <li><a href="" target="_blank">Página no GitHub Pages</a></li>
+        <li><a href="https://www.youtube.com/watch?v=6OztiE1FIjQ" target="_blank">Video do Youtube</a></li>
       </ul>
     </section>
 
