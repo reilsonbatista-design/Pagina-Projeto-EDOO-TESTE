@@ -17,7 +17,7 @@
     <section id="sobre">
       <h2>Sobre o Projeto</h2>
       <p>O <b>Raising Fighting Spirit</b> é um projeto acadêmico desenvolvido em <b>C++</b>, que tem como objetivo demonstrar a aplicação prática dos conceitos de <b>Programação Orientada a Objetos (POO)</b> por meio de um jogo interativo em ambiente de terminal.  
-No jogo, o jogador controla um personagem que busca aprimorar seu “espírito de luta”, enfrentando eventos aleatórios, desafios e decisões que influenciam diretamente sua evolução durante a jornada.  
+No jogo, o jogador cria um personagem, que pode enfrentar uma variedade de inimigos de diferentes tipos e níveis de poder, através de um sistema de combate com múltiplas ações que leva em conta as individualidades do personagem construido.
 
 A estrutura do código foi planejada com base em princípios sólidos de design de software, sendo dividida em módulos independentes e organizados em classes, como <b>Game</b>, <b>Events</b>, <b>Interface</b> e <b>SpiritGenerator</b>. Essa arquitetura modular permite um desenvolvimento mais limpo, reutilizável e de fácil manutenção.
 
@@ -57,32 +57,27 @@ O projeto também destaca o trabalho em equipe, com cada integrante responsável
   <p>
     Para compilar e executar o projeto <b>Raising Fighting Spirit</b>, é necessário ter um compilador C++ instalado, 
     como o <b>g++</b> (Linux) ou o <b>MinGW</b> (Windows).  
-    O jogo é executado diretamente no terminal, sem necessidade de interface gráfica.
+    O jogo é executado diretamente no terminal, sem necessidade de interface gráfica. Você também precisa de um Docker funcionando para poder rodar o programa.
   </p>
-
-  <p>Abra o terminal e acesse o diretório do projeto:</p>
-  <pre><code>
-cd raising-fighting-spirit
-  </code></pre>
 
   <p>Compile todos os arquivos-fonte com o seguinte comando:</p>
   <pre><code>
-g++ -o raising_fighting_spirit main.cpp Game.cpp Events.cpp Interface.cpp SpiritGenerator.cpp -std=c++17
+  docker-compose up --build
   </code></pre>
 
-  <p>Após a compilação bem-sucedida, execute o programa:</p>
+  <p>Após a compilação bem-sucedida, execute o programa, o que deve ser feito em um console diferente (ex: no vscode, abra um segundo console):</p>
   <pre><code>
-./raising_fighting_spirit
+docker-compose run --rm app
   </code></pre>
 </section>
 
     <section id="equipe">
       <h2>Equipe</h2>
       <ul>
-        <li><b>Aldus Daniel Ferreira de Souza Monteiro:</b>  arquitetura de módulos</li>
-        <li><b>igor de azevedo soares:</b> desenvolvedor de features negociais</li>
+        <li><b>Aldus Daniel Ferreira de Souza Monteiro:</b>  Arquitetura de módulos, criação do banco de dados, criador da lógica dos menus.</li>
+        <li><b>Igor de Azevedo Soares:</b> Desenvolvimento do sistema de criação de personagem, desenvolvimento do sistema de luta, design das mecânicas do jogo, desenvolvimento do funcionamento de todos os menus, escrita do relatório, escrita para o site, gravação do vídeo, criação do diagrama de classes.</li>
         <li><b>matheus noleto de sampaio gominho rosa:</b> configuração api externa e banco de dados</li>
-        <li><b>Reilson Batista da Fonseca:</b>desenvolvedor de features negociais </li>
+        <li><b>Reilson Batista da Fonseca:</b>desenvolvedor de features negociais, escrita do relatório, desenvolvimento do site.</li>
       </ul>
     </section>
 
@@ -91,8 +86,6 @@ g++ -o raising_fighting_spirit main.cpp Game.cpp Events.cpp Interface.cpp Spirit
       <ul>
         <li><a href="https://github.com/AldusD/raising-fighting-spirit" target="_blank">Repositório no GitHub</a></li>
         <li><a href="" target="_blank">Página no GitHub Pages</a></li>
-        <li><a href="" target="_blank">Video do Youtube</a></li>
-
       </ul>
     </section>
 
